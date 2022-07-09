@@ -1,8 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
-
-double a=3.14;
+//С клавиатуры вводится целое число. Вывести квадрат числа
+double a;
 double b;
 string? s=Console.ReadLine();//Ввод данных
 a=Convert.ToDouble(s);
@@ -15,7 +15,7 @@ System.Console.WriteLine($"{a}^2={b}"); //строка интерполяции
 
 
 /*
-String? s;
-s=Console.ReadLine();
+String? s;//объявили переменную
+s=Console.ReadLine();//присвоили переменную
 Console.WhriteLine(s);
 */
