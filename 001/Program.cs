@@ -1,16 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
-//С клавиатуры вводится целое число. Вывести квадрат числа
-double a;
-double b;
+﻿//С клавиатуры вводится цеrлое число. Вывести квадрат числа
+int a;
+int b;
 string? s=Console.ReadLine();//Ввод данных
-a=Convert.ToDouble(s);
+a=Convert.ToInt32(s);
 
 b=a*a;//обработка данных
 
 //Вывод результата
-System.Console.WriteLine("{0}^2={1}",a,b); //строка форматирования
+// System.Console.WriteLine("{0}^2={1}",a,b); //строка форматирования
 System.Console.WriteLine($"{a}^2={b}"); //строка интерполяции
 
 
