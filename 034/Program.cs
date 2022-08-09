@@ -7,12 +7,15 @@ int[] a;
 Init(out a,12,-9,9);
 //вывод массива (до обработки)
 Print(a);
+System.Console.WriteLine();
 //решение задачи
 int sumPositive;  
 int sumNegative;
 Solve(a,out sumPositive, out sumNegative);
+
 //Вывод результатов
-System.Console.WriteLine(sumPositive);          
+System.Console.WriteLine(sumPositive);    
+System.Console.WriteLine();      
 System.Console.WriteLine(sumNegative);    
 
 
