@@ -1,11 +1,35 @@
-﻿// Показать натуральные числа от 1 до N, N задано
-void Numbers(int i, int N)
+﻿// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+
+Console.Clear();
+Console.WriteLine($"Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N");
+int m = InputNumbers("Введите m: ");
+int n = InputNumbers("Введите n: ");
+int temp = m;
+
+if (m > n) 
 {
-    System.Console.WriteLine(i);
-    if(i<N)
-    {
-        Numbers(i+1,N);
-    }
+  m = n; 
+  n = temp;
 }
 
-Numbers(1,10);
+PrintSumm(m, n, temp=0);
+
+void PrintSumm(int m, int n, int summ)
+{
+  summ = summ + n;
+  if (n <= m)
+  {
+    Console.Write($"Сумма элементов= {summ} ");
+    return;
+  }
+  PrintSumm(m, n - 1, summ);
+}
+
+int InputNumbers(string input) 
+{
+  Console.Write(input);
+  int output = Convert.ToInt32(Console.ReadLine());
+  return output;
+}
